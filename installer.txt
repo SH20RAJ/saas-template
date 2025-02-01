@@ -1,0 +1,25 @@
+
+
+
+
+
+npm install next-auth@beta
+npx auth secret
+
+
+
+
+
+npx shadcn init
+npx shadcn add -a
+
+
+npm install prisma --save-dev
+npm install @prisma/client
+npx prisma init
+
+npx prisma migrate dev --name init
+npx prisma generate
+
+
+
