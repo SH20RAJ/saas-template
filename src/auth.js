@@ -1,10 +1,14 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Github from "next-auth/providers/github";
-import { getUserFromEmail } from "./app/api/publish/getUserFromEmail";
-import prisma from "@/lib/prisma";
+import { prisma } from "./prisma";
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import { getUserFromEmail } from "./lib/user";
+
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  adapter: PrismaAdapter(prisma),
+
   providers: [ 
     // Github,
      Google],

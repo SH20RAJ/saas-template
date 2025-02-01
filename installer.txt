@@ -14,8 +14,9 @@ npx shadcn init
 npx shadcn add -a
 
 
+npm install @prisma/client @auth/prisma-adapter
 npm install prisma --save-dev
-npm install @prisma/client
+
 npx prisma init
 
 npx prisma migrate dev --name init
