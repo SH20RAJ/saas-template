@@ -22,5 +22,13 @@ npx prisma init
 npx prisma migrate dev --name init
 npx prisma generate
 
+Apply Schema
+This will create an SQL migration file and execute it:
+
+
+pnpm exec prisma migrate dev
+
+
+
 
 
