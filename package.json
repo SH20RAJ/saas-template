@@ -1,18 +1,23 @@
 {
-  "name": "my-next-app",
+  "name": "saas-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npx prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
+    "db": "npx prisma db push",
+    "generate": "npx prisma generate",
+    "studio": "npx prisma studio",
     "pages:build": "pnpm next-on-pages",
     "preview": "pnpm pages:build && wrangler pages dev",
-    "deploy": "pnpm pages:build && wrangler pages deploy"
+    "deploy": "pnpm pages:build && wrangler pages deploy",
+    "gh-pages": "pnpm pages:build && wrangler pages publish"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@prisma/client": "^6.3.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.5",
     "@radix-ui/react-aspect-ratio": "^1.1.1",

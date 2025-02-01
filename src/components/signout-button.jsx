@@ -6,8 +6,8 @@
 // }
 
 
-import { signOut } from "@/auth.ts"
- 
+import { signOut } from "@/auth"
+
 export function SignOut() {
   return (
     <form
