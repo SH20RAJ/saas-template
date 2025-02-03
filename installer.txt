@@ -32,3 +32,8 @@ pnpm exec prisma migrate dev
 
 
 
+npm install @paypal/react-paypal-js
+
+
+
+
